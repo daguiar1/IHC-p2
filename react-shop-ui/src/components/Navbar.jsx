@@ -3,6 +3,8 @@ import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+
 
 const Container = styled.div`
   height: 60px;
@@ -21,12 +23,6 @@ const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
-`;
-
-const Language = styled.span`
-  font-size: 14px;
-  cursor: pointer;
-  ${mobile({ display: "none" })}
 `;
 
 const SearchContainer = styled.div`
@@ -66,26 +62,28 @@ const MenuItem = styled.div`
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
+
 const Navbar = () => {
   return (
     <Container>
       <Wrapper>
         <Left>
-          <Language>EN</Language>
           <SearchContainer>
             <Input placeholder="Search" />
             <Search style={{ color: "gray", fontSize: 16 }} />
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>LAMA.</Logo>
+          <Logo><a href="/home">ONWEAR</a></Logo>
         </Center>
         <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
+          <MenuItem><a href="/register">REGISTER</a></MenuItem>
+          <MenuItem><a href="/login">SIGN IN</a></MenuItem>
           <MenuItem>
             <Badge badgeContent={4} color="primary">
+              <a href="/cart">
               <ShoppingCartOutlined />
+              </a>
             </Badge>
           </MenuItem>
         </Right>

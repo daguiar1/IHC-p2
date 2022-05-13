@@ -1,3 +1,6 @@
+
+import React from 'react'
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
 import Product from "./pages/Product";
 import Home from "./pages/Home";
 import ProductList from "./pages/ProductList";
@@ -6,7 +9,19 @@ import Login from "./pages/Login";
 import Cart from "./pages/Cart";
 
 const App = () => {
-  return <Home/>;
-};
+  return (
+    <Router> 
+      <Routes>
+        <Route exact path="/" element={<Home/>}/>
+        <Route exact path="/home" element={<Home/>}/>
+        <Route exact path="/login" element={<Login/>}/>
+        <Route exact path="/register" element={<Register/>}/>
+        <Route exact path="/productList" element={<ProductList/>}/>
+        <Route exact path="/cart" element={<Cart/>}/>
+        <Route exact path="/product" element={<Product/>}/>
+      </Routes>
+    </Router>
+  );
+}
 
 export default App;
