@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import {mobile} from "../responsive";
+import Axios from 'axios';
+import React, { useState } from "react";
+
 
 const Container = styled.div`
   width: 100vw;
@@ -58,16 +61,43 @@ const Link = styled.a`
 `;
 
 const Login = () => {
+
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [Loginstatus, setLoginstatus] = useState('');
+
+  const login = () => {
+    Axios.post("http://localhost:3001/login", {
+      username: username,
+      password: password,
+    }).then((response) => {
+      if (response.data.message){
+        setLoginstatus(response.data.message);
+      } else {
+        setLoginstatus(response.data[0].username);
+      }
+    });
+  };
+
   return (
     <Container>
       <Wrapper>
         <Title>SIGN IN</Title>
         <Form>
-          <Input placeholder="username" />
-          <Input placeholder="password" />
-          <Button>LOGIN</Button>
+          <Input placeholder="username" 
+          Onchange={(e) => {
+            setUsername(e.target.value);
+            }} 
+          />
+          <Input placeholder="password" 
+          Onchange={(e) => {
+            setPassword(e.target.value);
+            }} 
+          />
+          <Button onClick={login}>LOGIN</Button>
+          <h1>{Loginstatus}</h1>
           <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link>
-          <Link>CREATE A NEW ACCOUNT</Link>
+          <Link><a href="/register">CREATE A NEW ACCOUNT</a></Link>
         </Form>
       </Wrapper>
     </Container>

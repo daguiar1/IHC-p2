@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import Axios from 'axios';
+import React, {useState} from "react";
 
 const Container = styled.div`
   width: 100vw;
@@ -55,22 +57,56 @@ const Button = styled.button`
 `;
 
 const Register = () => {
+
+  const [nameReg, setNameReg] = useState('')
+  const [lastnameReg, setLastnameReg] = useState('')
+  const [usernameReg, setUsernameReg] = useState('')
+  const [emailReg, setEmailReg] = useState('')
+  const [passwordReg, setPasswordReg] = useState('')
+
+  const register = () => {
+    Axios.post("http://localhost:3001/register", {
+      name: nameReg,
+      lastname: lastnameReg,
+      username: usernameReg,
+      email: emailReg,
+      password: passwordReg,
+    }).then((response) => {
+      console.log(response);
+    });
+  };
+
   return (
     <Container>
       <Wrapper>
         <Title>CREATE AN ACCOUNT</Title>
         <Form>
-          <Input placeholder="name" />
-          <Input placeholder="last name" />
-          <Input placeholder="username" />
-          <Input placeholder="email" />
-          <Input placeholder="password" />
-          <Input placeholder="confirm password" />
+          <Input placeholder="name" 
+          Onchange={(e) => {
+            setNameReg(e.target.value);
+            }} 
+          />
+          <Input placeholder="last name" 
+          Onchange={(e) => {
+            setLastnameReg(e.target.value);
+            }} />
+          <Input placeholder="username" 
+          Onchange={(e) => {
+            setUsernameReg(e.target.value);
+            }} />
+          <Input placeholder="email" 
+          Onchange={(e) => {
+            setEmailReg(e.target.value);
+            }} />
+          <Input placeholder="password" 
+          Onchange={(e) => {
+            setPasswordReg(e.target.value);
+            }} />
           <Agreement>
             By creating an account, I consent to the processing of my personal
             data in accordance with the <b>PRIVACY POLICY</b>
           </Agreement>
-          <Button>CREATE</Button>
+          <Button onClick={register}>CREATE</Button>
         </Form>
       </Wrapper>
     </Container>

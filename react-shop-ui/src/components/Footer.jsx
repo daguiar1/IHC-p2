@@ -90,9 +90,9 @@ const Footer = () => {
       <Left>
         <Logo>ONWEAR</Logo>
         <Desc>
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don’t look even slightly believable.
+        <p>ONWEAR is an online shopping.</p>
+        <p>This new form of online commerce is being created and developed, and emerges as an evolutionary consequence of traditional online stores, and the Internet as a business and leisure tool.</p>
+        <p>Here visitors can do practically everything they do in a traditional mall, such as window shopping, see different types of products, shop and sell products.</p>
         </Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">
@@ -112,14 +112,10 @@ const Footer = () => {
       <Center>
         <Title>Useful Links</Title>
         <List>
-          <ListItem>Home</ListItem>
-          <ListItem>Cart</ListItem>
-          <ListItem>Man Fashion</ListItem>
-          <ListItem>Woman Fashion</ListItem>
-          <ListItem>Accessories</ListItem>
+          <ListItem><a href="/home">Home</a></ListItem>
+          <ListItem><a href="/cart">Cart</a></ListItem>
+          <ListItem><a href="/productList">Fashion</a></ListItem>
           <ListItem>My Account</ListItem>
-          <ListItem>Order Tracking</ListItem>
-          <ListItem>Wishlist</ListItem>
           <ListItem>Wishlist</ListItem>
           <ListItem>Terms</ListItem>
         </List>
