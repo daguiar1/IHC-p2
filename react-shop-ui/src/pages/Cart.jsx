@@ -3,7 +3,10 @@ import styled from "styled-components";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { popularProducts } from "../data";
 import { mobile } from "../responsive";
+
+
 
 const Container = styled.div``;
 
@@ -161,52 +164,22 @@ const Cart = () => {
       <Wrapper>
         <Title>YOUR BAG</Title>
         <Top>
-          <TopButton>CONTINUE SHOPPING</TopButton>
-          <TopTexts>
-            <TopText>Shopping Bag(2)</TopText>
-            <TopText>Your Wishlist (0)</TopText>
-          </TopTexts>
+          <TopButton><a href="/productList">CONTINUE SHOPPING</a></TopButton>
           <TopButton type="filled">CHECKOUT NOW</TopButton>
         </Top>
         <Bottom>
           <Info>
             <Product>
               <ProductDetail>
-                <Image src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1614188818-TD1MTHU_SHOE_ANGLE_GLOBAL_MENS_TREE_DASHERS_THUNDER_b01b1013-cd8d-48e7-bed9-52db26515dc4.png?crop=1xw:1.00xh;center,top&resize=480%3A%2A" />
+                <Image src= {popularProducts[0].img} />
                 <Details>
                   <ProductName>
-                    <b>Product:</b> JESSIE THUNDER SHOES
+                    <b>Product:</b> BOOHOOMAN HOODIE TREE
                   </ProductName>
                   <ProductId>
                     <b>ID:</b> 93813718293
                   </ProductId>
                   <ProductColor color="black" />
-                  <ProductSize>
-                    <b>Size:</b> 37.5
-                  </ProductSize>
-                </Details>
-              </ProductDetail>
-              <PriceDetail>
-                <ProductAmountContainer>
-                  <Add />
-                  <ProductAmount>2</ProductAmount>
-                  <Remove />
-                </ProductAmountContainer>
-                <ProductPrice>$ 30</ProductPrice>
-              </PriceDetail>
-            </Product>
-            <Hr />
-            <Product>
-              <ProductDetail>
-                <Image src="https://i.pinimg.com/originals/2d/af/f8/2daff8e0823e51dd752704a47d5b795c.png" />
-                <Details>
-                  <ProductName>
-                    <b>Product:</b> HAKURA T-SHIRT
-                  </ProductName>
-                  <ProductId>
-                    <b>ID:</b> 93813718293
-                  </ProductId>
-                  <ProductColor color="gray" />
                   <ProductSize>
                     <b>Size:</b> M
                   </ProductSize>
@@ -218,7 +191,59 @@ const Cart = () => {
                   <ProductAmount>1</ProductAmount>
                   <Remove />
                 </ProductAmountContainer>
-                <ProductPrice>$ 20</ProductPrice>
+                <ProductPrice>30 €</ProductPrice>
+              </PriceDetail>
+            </Product>
+            <Hr />
+            <Product>
+              <ProductDetail>
+                <Image src= {popularProducts[6].img} />
+                <Details>
+                  <ProductName>
+                    <b>Product:</b> BOOHOOMAN HAT
+                  </ProductName>
+                  <ProductId>
+                    <b>ID:</b> 56323328343
+                  </ProductId>
+                  <ProductColor color="black" />
+                  <ProductSize>
+                    <b>Size:</b> UNIQUE
+                  </ProductSize>
+                </Details>
+              </ProductDetail>
+              <PriceDetail>
+                <ProductAmountContainer>
+                  <Add />
+                  <ProductAmount>1</ProductAmount>
+                  <Remove />
+                </ProductAmountContainer>
+                <ProductPrice>14 €</ProductPrice>
+              </PriceDetail>
+            </Product>
+            <Hr />
+            <Product>
+              <ProductDetail>
+                <Image src= {popularProducts[2].img} />
+                <Details>
+                  <ProductName>
+                    <b>Product:</b> BOOHOOMAN SHIRT
+                  </ProductName>
+                  <ProductId>
+                    <b>ID:</b> 241264993483
+                  </ProductId>
+                  <ProductColor color="grey" />
+                  <ProductSize>
+                    <b>Size:</b> M
+                  </ProductSize>
+                </Details>
+              </ProductDetail>
+              <PriceDetail>
+                <ProductAmountContainer>
+                  <Add />
+                  <ProductAmount>1</ProductAmount>
+                  <Remove />
+                </ProductAmountContainer>
+                <ProductPrice>12 €</ProductPrice>
               </PriceDetail>
             </Product>
           </Info>
@@ -226,21 +251,21 @@ const Cart = () => {
             <SummaryTitle>ORDER SUMMARY</SummaryTitle>
             <SummaryItem>
               <SummaryItemText>Subtotal</SummaryItemText>
-              <SummaryItemPrice>$ 80</SummaryItemPrice>
+              <SummaryItemPrice>56 €</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem>
               <SummaryItemText>Estimated Shipping</SummaryItemText>
-              <SummaryItemPrice>$ 5.90</SummaryItemPrice>
+              <SummaryItemPrice>5.90 €</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem>
               <SummaryItemText>Shipping Discount</SummaryItemText>
-              <SummaryItemPrice>$ -5.90</SummaryItemPrice>
+              <SummaryItemPrice>-5.90 €</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem type="total">
               <SummaryItemText>Total</SummaryItemText>
-              <SummaryItemPrice>$ 80</SummaryItemPrice>
+              <SummaryItemPrice>56 €</SummaryItemPrice>
             </SummaryItem>
-            <Button>CHECKOUT NOW</Button>
+            <Button onClick={() => {alert('Hi, your order has been received');}}>CHECKOUT NOW</Button>
           </Summary>
         </Bottom>
       </Wrapper>

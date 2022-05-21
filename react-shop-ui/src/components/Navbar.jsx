@@ -3,7 +3,7 @@ import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
 
 
 const Container = styled.div`
@@ -62,25 +62,38 @@ const MenuItem = styled.div`
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
+const MenuItem2 = styled.h2`
+  font-weight: bold;
+  ${mobile({ fontSize: "24px" })}
+`;
 
 const Navbar = () => {
   return (
     <Container>
       <Wrapper>
         <Left>
+          <img src="https://i.ibb.co/n0gG144/Capturar-removebg-preview.png" width={55} />
           <SearchContainer>
             <Input placeholder="Search" />
             <Search style={{ color: "gray", fontSize: 16 }} />
           </SearchContainer>
         </Left>
         <Center>
-          <Logo><a href="/home">ONWEAR</a></Logo>
+          <MenuItem2><a href="/productList">BUY</a></MenuItem2>
+        </Center>
+        <Center>
+          <Logo>
+            <Link to="/home">ONWEAR</Link></Logo>
+        </Center>
+        <Center>
+          <MenuItem2><a href="/sell">SELL</a></MenuItem2>
         </Center>
         <Right>
+          
           <MenuItem><a href="/register">REGISTER</a></MenuItem>
           <MenuItem><a href="/login">SIGN IN</a></MenuItem>
           <MenuItem>
-            <Badge badgeContent={4} color="primary">
+            <Badge badgeContent={3} color="primary">
               <a href="/cart">
               <ShoppingCartOutlined />
               </a>

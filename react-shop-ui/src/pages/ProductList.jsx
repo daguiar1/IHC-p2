@@ -4,6 +4,10 @@ import Announcement from "../components/Announcement";
 import Products from "../components/Products";
 import Footer from "../components/Footer";
 import { mobile } from "../responsive";
+import { Slider } from '@mui/material';
+import * as React from 'react';
+import Box from '@mui/material/Box';
+
 
 const Container = styled.div``;
 
@@ -35,12 +39,27 @@ const Select = styled.select`
 `;
 const Option = styled.option``;
 
+function valuetext(value) {
+  return `${value}°C`;
+}
+
+
+
+
+
 const ProductList = () => {
+
+  const [value, setValue] = React.useState([0, 100]);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   return (
     <Container>
       <Navbar />
       <Announcement />
-      <Title>Dresses</Title>
+      <Title>Clothes</Title>
       <FilterContainer>
         <Filter>
           <FilterText>Filter Products:</FilterText>
@@ -65,6 +84,30 @@ const ProductList = () => {
             <Option>L</Option>
             <Option>XL</Option>
           </Select>
+          <Select>
+            <Option disabled selected>
+              Gender
+            </Option>
+            <Option>Men</Option>
+            <Option>Women</Option>
+          </Select>
+          <Select>
+            <Option disabled selected>
+              Condition
+            </Option>
+            <Option>New</Option>
+            <Option>Used</Option>
+          </Select>
+          <Box sx={{ width: 300 }}>
+            Price Range €
+            <Slider
+              getAriaLabel={() => 'Price range'}
+              value={value}
+              onChange={handleChange}
+              valueLabelDisplay="auto"
+              getAriaValueText={valuetext}
+            />
+          </Box>
         </Filter>
         <Filter>
           <FilterText>Sort Products:</FilterText>

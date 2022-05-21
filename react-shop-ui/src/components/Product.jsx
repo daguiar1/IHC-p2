@@ -73,10 +73,10 @@ const Product = ({ item }) => {
       <Image src={item.img} />
       <Info>
         <Icon>
-          <ShoppingCartOutlined />
+          <a href="/cart"><ShoppingCartOutlined /></a>
         </Icon>
         <Icon>
-          <SearchOutlined />
+        <a href="/product"><SearchOutlined /></a>
         </Icon>
         <Icon>
           <FavoriteBorderOutlined />
