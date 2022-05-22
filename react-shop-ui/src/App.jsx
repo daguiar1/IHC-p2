@@ -9,6 +9,8 @@ import Login from "./pages/Login";
 import Cart from "./pages/Cart";
 import Account from "./pages/Account"
 import AccountDetails from "./pages/AccountDetails"
+import SellingProducts from "./pages/SellingProducts"
+
 
 
 const App = () => {
@@ -24,6 +26,7 @@ const App = () => {
         <Route exact path="/product" element={<Product/>}/>
         <Route exact path='/account' element={<Account/>}/>
         <Route exact path='/accountDetails' element={<AccountDetails/>}/>
+        <Route exact path='/sellingProducts' element={<SellingProducts/>}/>
       </Routes>
     </Router>
   );

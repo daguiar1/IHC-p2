@@ -1,4 +1,3 @@
-import { Add, Remove } from "@material-ui/icons";
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
@@ -6,8 +5,6 @@ import Navbar from "../components/Navbar";
 import { mobile } from "../responsive";
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
-import Box from '@mui/material/Box';
-
 
 
 const Container = styled.div``;
@@ -29,13 +26,6 @@ const Top = styled.div`
   padding: 20px;
 `;
 
-const Bottom = styled.div`
-  display: flex;
-  justify-content: space-between;
-  ${mobile({ flexDirection: "column" })}
-
-`;
-
 const Image = styled.img`
   width: 200px;
 `;
@@ -48,9 +38,8 @@ const Left = styled.div`
 `;
 
 const buttons = [
-    <Button ><a href="/accountDetails">ACCOUNT DETAILS</a></Button>,
-    <Button >Two</Button>,
-    <Button >Three</Button>,
+    <a href="/accountDetails"><Button >ACCOUNT DETAILS</Button></a>,
+    <a href="/sellingProducts"><Button >SELLING PRODUCTS</Button></a>,
   ];
 
 const Center = styled.div`
@@ -82,9 +71,6 @@ const Cart = () => {
                 {buttons}
                 </ButtonGroup> 
             </Left>
-            
-            
-        
       </Wrapper>
       <Footer />
     </Container>

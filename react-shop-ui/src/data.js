@@ -55,3 +55,20 @@
       img:"https://i.ibb.co/vZRJN8B/ice-grey-oversized-colour-block-paint-denim-jacket-removebg-preview.png"
     },
   ]
+
+  export const sellingProducts = [
+    {
+      id:1,
+      img:"https://images1.vinted.net/t/01_01f56_NcFy3VzbZ1wsGfkCMFuT7tzY/f800/1652806120.jpeg?s=47d63ca1026fe87fbcd6f3dc4abcf283caa5910a",
+    },
+    {
+      id:2,
+      img:"https://images1.vinted.net/t/01_009db_r9e2cHpEfZVT6JZbQd3k7skT/f800/1652031525.jpeg?s=2e62966168a956ca298412bf3ad3d73e63d65727",
+    },
+    {
+      id:3,
+      img:"https://images1.vinted.net/t/03_00413_6JJjzBvcBGveGvW11VPhi2yb/f800/1652965943.jpeg?s=5e81d00f90da826a9ea2647c6da35d210cf854f4",
+    },
+
+    
+  ]

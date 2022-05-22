@@ -1,9 +1,7 @@
-import { Add, Remove } from "@material-ui/icons";
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import { popularProducts } from "../data";
 import { mobile } from "../responsive";
 
 
@@ -25,25 +23,6 @@ const Top = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-`;
-
-const TopButton = styled.button`
-  padding: 10px;
-  font-weight: 600;
-  cursor: pointer;
-  border: ${(props) => props.type === "filled" && "none"};
-  background-color: ${(props) =>
-    props.type === "filled" ? "black" : "transparent"};
-  color: ${(props) => props.type === "filled" && "white"};
-`;
-
-const TopTexts = styled.div`
-  ${mobile({ display: "none" })}
-`;
-const TopText = styled.span`
-  text-decoration: underline;
-  cursor: pointer;
-  margin: 0px 10px;
 `;
 
 const Bottom = styled.div`
@@ -126,7 +105,7 @@ const Cart = () => {
                     <Input placeholder="CITY"/>
                     <Input placeholder="POSTCODE"/>
                 </Form>
-                <Button >SAVE</Button>
+                <a href="/account"><Button>SAVE</Button></a>
                 </Details>
                 
               </ProductDetail>
