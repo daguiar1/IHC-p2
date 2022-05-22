@@ -165,7 +165,7 @@ const Cart = () => {
         <Title>YOUR BAG</Title>
         <Top>
           <TopButton><a href="/productList">CONTINUE SHOPPING</a></TopButton>
-          <TopButton type="filled">CHECKOUT NOW</TopButton>
+          <TopButton type="filled" onClick={() => {alert('Hi, your order has been received');}}>CHECKOUT NOW</TopButton>
         </Top>
         <Bottom>
           <Info>

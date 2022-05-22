@@ -1,8 +1,10 @@
 import { Badge } from "@material-ui/core";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
 
 
@@ -72,7 +74,7 @@ const Navbar = () => {
     <Container>
       <Wrapper>
         <Left>
-          <img src="https://i.ibb.co/n0gG144/Capturar-removebg-preview.png" width={55} />
+          <ShoppingBagIcon fontSize="Large"/>
           <SearchContainer>
             <Input placeholder="Search" />
             <Search style={{ color: "gray", fontSize: 16 }} />
@@ -92,6 +94,11 @@ const Navbar = () => {
           
           <MenuItem><a href="/register">REGISTER</a></MenuItem>
           <MenuItem><a href="/login">SIGN IN</a></MenuItem>
+          <MenuItem>           
+              <a href="/account">
+              <AccountCircleIcon fontSize="Large" />
+              </a>
+          </MenuItem>
           <MenuItem>
             <Badge badgeContent={3} color="primary">
               <a href="/cart">
