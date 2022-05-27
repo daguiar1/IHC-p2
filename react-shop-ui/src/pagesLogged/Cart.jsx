@@ -1,8 +1,8 @@
 import { Add, Remove } from "@material-ui/icons";
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Footer from "../components/FooterLogged";
+import Navbar from "../components/NavBarLogged";
 import { popularProducts } from "../data";
 import { mobile } from "../responsive";
 
@@ -185,76 +185,20 @@ const Cart = () => {
                 <ProductPrice>30 €</ProductPrice>
               </PriceDetail>
             </Product>
-            <Hr />
-            <Product>
-              <ProductDetail>
-                <Image src= {popularProducts[6].img} />
-                <Details>
-                  <ProductName>
-                    <b>Product:</b> BOOHOOMAN HAT
-                  </ProductName>
-                  <ProductId>
-                    <b>ID:</b> 56323328343
-                  </ProductId>
-                  <ProductColor color="black" />
-                  <ProductSize>
-                    <b>Size:</b> UNIQUE
-                  </ProductSize>
-                </Details>
-              </ProductDetail>
-              <PriceDetail>
-                <ProductAmountContainer>
-                  <Add />
-                  <ProductAmount>1</ProductAmount>
-                  <Remove />
-                </ProductAmountContainer>
-                <ProductPrice>14 €</ProductPrice>
-              </PriceDetail>
-            </Product>
-            <Hr />
-            <Product>
-              <ProductDetail>
-                <Image src= {popularProducts[2].img} />
-                <Details>
-                  <ProductName>
-                    <b>Product:</b> BOOHOOMAN SHIRT
-                  </ProductName>
-                  <ProductId>
-                    <b>ID:</b> 241264993483
-                  </ProductId>
-                  <ProductColor color="grey" />
-                  <ProductSize>
-                    <b>Size:</b> M
-                  </ProductSize>
-                </Details>
-              </ProductDetail>
-              <PriceDetail>
-                <ProductAmountContainer>
-                  <Add />
-                  <ProductAmount>1</ProductAmount>
-                  <Remove />
-                </ProductAmountContainer>
-                <ProductPrice>12 €</ProductPrice>
-              </PriceDetail>
-            </Product>
           </Info>
           <Summary>
             <SummaryTitle>ORDER SUMMARY</SummaryTitle>
             <SummaryItem>
               <SummaryItemText>Subtotal</SummaryItemText>
-              <SummaryItemPrice>56 €</SummaryItemPrice>
+              <SummaryItemPrice>30 €</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem>
               <SummaryItemText>Estimated Shipping</SummaryItemText>
               <SummaryItemPrice>5.90 €</SummaryItemPrice>
             </SummaryItem>
-            <SummaryItem>
-              <SummaryItemText>Shipping Discount</SummaryItemText>
-              <SummaryItemPrice>-5.90 €</SummaryItemPrice>
-            </SummaryItem>
             <SummaryItem type="total">
               <SummaryItemText>Total</SummaryItemText>
-              <SummaryItemPrice>56 €</SummaryItemPrice>
+              <SummaryItemPrice>35.90 €</SummaryItemPrice>
             </SummaryItem>
             <Button onClick={() => {alert('Hi, your order has been received');}}>CHECKOUT NOW</Button>
           </Summary>

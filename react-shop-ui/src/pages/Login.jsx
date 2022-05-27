@@ -94,9 +94,8 @@ const Login = () => {
             setPassword(e.target.value);
             }} 
           />
-          <Button onClick={login}>LOGIN</Button>
+          <Button><a href="/homeLogged">LOGIN</a></Button>
           <h1>{Loginstatus}</h1>
-          <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link>
           <Link><a href="/register">CREATE A NEW ACCOUNT</a></Link>
         </Form>
       </Wrapper>

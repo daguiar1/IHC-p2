@@ -6,11 +6,14 @@ import Home from "./pages/Home";
 import ProductList from "./pages/ProductList";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
-import Cart from "./pages/Cart";
-import Account from "./pages/Account"
-import AccountDetails from "./pages/AccountDetails"
-import SellingProducts from "./pages/SellingProducts"
-import Sell from "./pages/Sell"
+import Cart from "./pagesLogged/Cart";
+import Account from "./pagesLogged/Account"
+import AccountDetails from "./pagesLogged/AccountDetails"
+import SellingProducts from "./pagesLogged/SellingProducts"
+import Sell from "./pagesLogged/Sell"
+import ProductLogged from "./pagesLogged/Product";
+import HomeLogged from "./pagesLogged/Home";
+import ProductListLogged from "./pagesLogged/ProductList";
 
 
 const App = () => {
@@ -28,6 +31,12 @@ const App = () => {
         <Route exact path='/accountDetails' element={<AccountDetails/>}/>
         <Route exact path='/sellingProducts' element={<SellingProducts/>}/>
         <Route exact path='/sell' element={<Sell/>}/>
+        <Route exact path="/homeLogged" element={<HomeLogged/>}/>
+        <Route exact path="/productListLogged" element={<ProductListLogged/>}/>
+        <Route exact path="/productLogged" element={<ProductLogged/>}/>
+
+
+
       </Routes>
     </Router>
   );

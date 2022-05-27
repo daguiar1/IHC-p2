@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Footer from "../components/FooterLogged";
+import Navbar from "../components/NavBarLogged";
 import { mobile } from "../responsive";
 
 
@@ -89,7 +89,7 @@ const Cart = () => {
       <Wrapper>
         <Title>ACCOUNT DETAILS</Title>
         <Top>
-          <h1>Hi, <b>Rafael Dias</b></h1>
+          <h1>Hi, <b>Admin</b></h1>
         </Top>
         <Bottom>
           <Info>

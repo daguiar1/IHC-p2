@@ -81,20 +81,28 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <MenuItem2><a href="/productList">BUY</a></MenuItem2>
+          <MenuItem2><a href="/productListLogged">BUY</a></MenuItem2>
         </Center>
         <Center>
           <Logo>
-            <Link to="/home">ONWEAR</Link></Logo>
+            <Link to="/homeLogged">ONWEAR</Link></Logo>
         </Center>
         <Center>
-          <MenuItem2><a href="/login">SELL</a></MenuItem2>
+          <MenuItem2><a href="/sell">SELL</a></MenuItem2>
         </Center>
-        <Right>
-          
-          <MenuItem><a href="/register">REGISTER</a></MenuItem>
-          <MenuItem><a href="/login">SIGN IN</a></MenuItem>
-          
+        <Right>  
+          <MenuItem>           
+              <a href="/account">
+              <AccountCircleIcon fontSize="Large" />
+              </a>
+          </MenuItem>
+          <MenuItem>
+            <Badge badgeContent={1} color="primary">
+              <a href="/cart">
+              <ShoppingCartOutlined />
+              </a>
+            </Badge>
+          </MenuItem>
         </Right>
       </Wrapper>
     </Container>

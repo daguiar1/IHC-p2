@@ -74,13 +74,7 @@ const Product = ({ item }) => {
       
       <Info>
         <Icon>
-          <a href="/cart"><ShoppingCartOutlined /></a>
-        </Icon>
-        <Icon>
         <a href="/product"><SearchOutlined /></a>
-        </Icon>
-        <Icon>
-          <FavoriteBorderOutlined />
         </Icon>
       </Info>  
     <h2>{item.condition}</h2>
