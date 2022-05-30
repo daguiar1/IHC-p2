@@ -9,8 +9,7 @@ import React, { useState } from "react";
 
 
 const Container = styled.div`
-display: "flex",
-border: "1px solid red"
+    
     
 `;
 
@@ -26,6 +25,7 @@ const Title = styled.h1`
 
 
 const Left = styled.div`
+
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -34,13 +34,19 @@ const Left = styled.div`
 
 
 const Form = styled.form`
-  display: flex;
-  flex-direction: column
+position: absolute;
+  right: 20%;
+  top:35%;
+  width: 30%;
+  display:flex;
+  flex-direction: column;
+  padding: 30px;
+  border: 2px solid grey;
 `;
 
 const Input = styled.input`
   flex: 1;
-  width: 35%;
+  width: 94%;
   margin: 20px 0px 0px 0px;
   padding: 10px;
   border: 2px solid grey;
@@ -55,6 +61,7 @@ const Sell = () => {
         setFile(URL.createObjectURL(e.target.files[0]));
     }
     const [nameReg, setNameReg] = useState('')
+    const [GenderReg, setGenderReg] = useState('')
     const [SizeReg, setSizeReg] = useState('')
     const [PriceReg, setPriceReg] = useState('')
     const [WearReg, setWearlReg] = useState('')
@@ -78,11 +85,15 @@ const Sell = () => {
         
         
         <Form>
-          <Input placeholder="Name" 
+          <Input placeholder="Description" 
           Onchange={(e) => {
             setNameReg(e.target.value);
             }} 
           />
+          <Input placeholder="Gender" 
+          Onchange={(e) => {
+            setGenderReg(e.target.value);
+            }} />
           <Input placeholder="Size" 
           Onchange={(e) => {
             setSizeReg(e.target.value);
@@ -96,7 +107,7 @@ const Sell = () => {
             setWearlReg(e.target.value);
             }} />
 
-            <input type="submit"/>
+            <input type="submit" onClick={() => {alert('Thanks, your product will be analyzed by our admins!');}}></input>
        
         </Form>
    
