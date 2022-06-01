@@ -100,28 +100,6 @@ const Cart = () => {
           <Info>
             <Product>
               <ProductDetail>
-                <Image src= {sellingProducts[0].img} />
-                <Details>
-                  <ProductName>
-                    <b>Product:</b> VANS SHIRT
-                  </ProductName>
-                  <ProductId>
-                    <b>ID:</b> 93813718293
-                  </ProductId>
-                  <b>STATUS: </b>
-                    <ProductColor color="green"/>
-                  <ProductSize>
-                    <b>Size:</b> M
-                  </ProductSize>
-                </Details>
-              </ProductDetail>
-              <PriceDetail>
-                <ProductPrice>Estimated selling price: 25 €</ProductPrice>
-              </PriceDetail>
-            </Product>
-            <Hr />
-            <Product>
-              <ProductDetail>
                 <Image src= {sellingProducts[2].img} />
                 <Details>
                   <ProductName>
@@ -131,7 +109,7 @@ const Cart = () => {
                     <b>ID:</b> 56323328343
                   </ProductId>
                   <b>STATUS: </b>
-                  <ProductColor color="red" />
+                  <ProductColor color="yellow" />
                   <ProductSize>
                     <b>Size:</b> 42,5
                   </ProductSize>
@@ -139,28 +117,6 @@ const Cart = () => {
               </ProductDetail>
               <PriceDetail>
                 <ProductPrice>Estimated selling price: 60 €</ProductPrice>
-              </PriceDetail>
-            </Product>
-            <Hr />
-            <Product>
-              <ProductDetail>
-                <Image src= {sellingProducts[1].img} />
-                <Details>
-                  <ProductName>
-                    <b>Product:</b> ATLETICO MINEIRO SHIRT
-                  </ProductName>
-                  <ProductId>
-                    <b>ID:</b> 241264993483
-                  </ProductId>
-                  <b>STATUS: </b>
-                  <ProductColor color="yellow" />
-                  <ProductSize>
-                    <b>Size:</b> L
-                  </ProductSize>
-                </Details>
-              </ProductDetail>
-              <PriceDetail>
-                <ProductPrice>Estimated selling price: 35 €</ProductPrice>
               </PriceDetail>
             </Product>
           </Info>

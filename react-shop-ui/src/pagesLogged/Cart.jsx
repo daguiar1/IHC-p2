@@ -155,7 +155,7 @@ const Cart = () => {
       <Wrapper>
         <Title>YOUR BAG</Title>
         <Top>
-          <TopButton><a href="/productList">CONTINUE SHOPPING</a></TopButton>
+          <TopButton><a href="/productListLogged">CONTINUE SHOPPING</a></TopButton>
           <TopButton type="filled" onClick={() => {alert('Hi, your order has been received');}}>CHECKOUT NOW</TopButton>
         </Top>
         <Bottom>
@@ -165,14 +165,14 @@ const Cart = () => {
                 <Image src= {popularProducts[0].img} />
                 <Details>
                   <ProductName>
-                    <b>Product:</b> BOOHOOMAN HOODIE TREE
+                    <b>Product:</b> TALL PALM EMBROIDERED OVERSIZED HOODIE
                   </ProductName>
                   <ProductId>
                     <b>ID:</b> 93813718293
                   </ProductId>
-                  <ProductColor color="black" />
+                  <ProductColor color={popularProducts[0].color} />
                   <ProductSize>
-                    <b>Size:</b> M
+                    <b>Size:</b> {popularProducts[0].size}
                   </ProductSize>
                 </Details>
               </ProductDetail>
@@ -182,7 +182,7 @@ const Cart = () => {
                   <ProductAmount>1</ProductAmount>
                   <Remove />
                 </ProductAmountContainer>
-                <ProductPrice>30 €</ProductPrice>
+                <ProductPrice>{popularProducts[0].price} €</ProductPrice>
               </PriceDetail>
             </Product>
           </Info>
@@ -190,7 +190,7 @@ const Cart = () => {
             <SummaryTitle>ORDER SUMMARY</SummaryTitle>
             <SummaryItem>
               <SummaryItemText>Subtotal</SummaryItemText>
-              <SummaryItemPrice>30 €</SummaryItemPrice>
+              <SummaryItemPrice>{popularProducts[0].price} €</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem>
               <SummaryItemText>Estimated Shipping</SummaryItemText>
@@ -198,7 +198,7 @@ const Cart = () => {
             </SummaryItem>
             <SummaryItem type="total">
               <SummaryItemText>Total</SummaryItemText>
-              <SummaryItemPrice>35.90 €</SummaryItemPrice>
+              <SummaryItemPrice>31.90 €</SummaryItemPrice>
             </SummaryItem>
             <Button onClick={() => {alert('Hi, your order has been received');}}>CHECKOUT NOW</Button>
           </Summary>

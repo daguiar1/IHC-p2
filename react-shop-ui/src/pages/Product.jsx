@@ -4,6 +4,8 @@ import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { mobile } from "../responsive";
+import { popularProducts } from "../data";
+
 
 const Container = styled.div``;
 
@@ -121,24 +123,18 @@ const Product = () => {
       <Announcement />
       <Wrapper>
         <ImgContainer>
-          <Image src="https://i.ibb.co/S6qMxwr/jean.jpg" />
+          <Image src= {popularProducts[0].img}/>
         </ImgContainer>
         <InfoContainer>
-          <Title>Denim Jumpsuit</Title>
+          <Title>TALL PALM EMBROIDERED OVERSIZED HOODIE</Title>
           <Desc>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at
-            iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget
-            tristique tortor pretium ut. Curabitur elit justo, consequat id
-            condimentum ac, volutpat ornare.
+          Hoodies and sweatshirts are essential for boxing those clean, comfortable layers. Hoodies work as a classic mid-layer or a standalone everyday basic when the weather is a little bit warmer. When you want a minimal colourway to effortlessly finish off your outfit, choosing a sweatshirt is always a solid option. A staple in your wardrobe already, jersey hoodies and sweats are a failsafe grab-and-go for any occasion. Find the perfect casual top to complement your off-duty look in our selection of hoodies and sweats for men.
           </Desc>
-          <Price>$ 20</Price>
+          <Price>{popularProducts[0].price} €</Price>
           <FilterContainer>
             <Filter>
               <FilterTitle>Color</FilterTitle>
-              <FilterColor color="black" />
-              <FilterColor color="darkblue" />
-              <FilterColor color="gray" />
+              <FilterColor color={popularProducts[0].color} />
             </Filter>
             <Filter>
               <FilterTitle>Size</FilterTitle>
@@ -157,7 +153,7 @@ const Product = () => {
               <Amount>1</Amount>
               <Add />
             </AmountContainer>
-            <Button>ADD TO CART</Button>
+            <a href="/login"><Button onClick={() => {alert('Hi, you need to be logged in to add this product to your cart.');}}>ADD TO CART</Button></a>
           </AddContainer>
         </InfoContainer>
       </Wrapper>

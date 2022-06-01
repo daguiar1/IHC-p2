@@ -11,7 +11,7 @@ import Account from "./pagesLogged/Account"
 import AccountDetails from "./pagesLogged/AccountDetails"
 import SellingProducts from "./pagesLogged/SellingProducts"
 import Sell from "./pagesLogged/Sell"
-import ProductLogged from "./pagesLogged/Product";
+import ProductLogged from "./pagesLogged/ProductLogged";
 import HomeLogged from "./pagesLogged/Home";
 import ProductListLogged from "./pagesLogged/ProductList";
 

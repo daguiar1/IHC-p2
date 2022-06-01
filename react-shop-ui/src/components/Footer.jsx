@@ -113,7 +113,7 @@ const Footer = () => {
         <Title>Useful Links</Title>
         <List>
           <ListItem><a href="/home">Home</a></ListItem>
-          <ListItem><a href="/cart">Cart</a></ListItem>
+          <ListItem><a href="/login">Cart</a></ListItem>
           <ListItem><a href="/productList">Fashion</a></ListItem>
           <ListItem><a href="/login">My Account</a></ListItem>
           <ListItem>Wishlist</ListItem>

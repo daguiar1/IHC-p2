@@ -77,7 +77,7 @@ import {
             <a href="/cart"><ShoppingCartOutlined /></a>
           </Icon>
           <Icon>
-          <a href="/product"><SearchOutlined /></a>
+          <a href="/productLogged"><SearchOutlined /></a>
           </Icon>
           <Icon>
             <FavoriteBorderOutlined />
