@@ -66,7 +66,7 @@ import {
     }
   `;
   
-  const Product = ({ item }) => {
+export default function Product ({ item }){
     return (
       <Container>
         <h2>Price: {item.price}€ </h2>
@@ -77,7 +77,7 @@ import {
             <a href="/cart"><ShoppingCartOutlined /></a>
           </Icon>
           <Icon>
-          <a href="/productLogged"><SearchOutlined /></a>
+          <a href="/product"><SearchOutlined /></a>
           </Icon>
           <Icon>
             <FavoriteBorderOutlined />
@@ -86,7 +86,5 @@ import {
       <h2>{item.condition}</h2>
       </Container>
     );
-  };
-  
-  export default Product;
+  }
   

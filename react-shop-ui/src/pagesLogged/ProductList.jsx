@@ -3,10 +3,9 @@ import Navbar from "../components/NavBarLogged";
 import Announcement from "../components/Announcement";
 import Products from "../components/ProductsLogged";
 import Footer from "../components/FooterLogged";
-import { mobile } from "../responsive";
-import { Slider } from '@mui/material';
-import * as React from 'react';
-import Box from '@mui/material/Box';
+import { popularProducts } from "../data";
+import React, { Component } from "react";
+import Filter from "../components/Filter";
 
 
 const Container = styled.div``;
@@ -15,117 +14,173 @@ const Title = styled.h1`
   margin: 20px;
 `;
 
-const FilterContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
 
-const Filter = styled.div`
-  margin: 20px;
-  ${mobile({ width: "0px 20px", display: "flex", flexDirection: "column" })}
-`;
+export default class ProductList extends Component{
+  constructor(){
+    super();
+    this.state={
+      products:popularProducts,
+      sort:'',
+      col:'',
+      siz:'',
+      gend:'',
+      cond:'',
 
-const FilterText = styled.span`
-  font-size: 20px;
-  font-weight: 600;
-  margin-right: 20px;
-  ${mobile({ marginRight: "0px" })}
-`;
+    }
+  }
+//sorting
+sorting = (e)=>{
+  //console.log(e.target.value);
+  const sorting = e.target.value;
 
-const Select = styled.select`
-  padding: 10px;
-  margin-right: 20px;
-  ${mobile({ margin: "10px 0px" })}
-`;
-const Option = styled.option``;
+  const sortRes = this.state.products.sort((a,b)=>{
+    
+    if(sorting==='all'){
+      return a.id>b.id?1:-1
+    }
+    if(sorting==='low'){
+      return a.price>b.price?1:-1
+    }
+    if(sorting==='high'){
+      return a.price<b.price?1:-1
+    }
 
-function valuetext(value) {
-  return `${value}°C`;
+  })
+
+  this.setState({
+    sort:sorting,
+    products:sortRes
+  })
 }
 
+//filtering by color
+filteringColor =(e)=>{
+  let categ = e.target.value;
+  if(categ ==='all'){
+    this.setState({
+      col:categ,
+      products:popularProducts
+    })
+  }
 
-
-
-
-const ProductList = () => {
-  var color = "";
-  var size = "";
-  const [value, setValue] = React.useState([0, 100]);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
-  return (
-    <Container>
-      <Navbar />
-      <Announcement />
-      <Title>Clothes</Title>
-      ola
-      <FilterContainer>
-        <Filter>
-          <FilterText>Filter Products:</FilterText>
-          <Select>
-            <Option disabled selected>
-              Color
-            </Option>
-            <Option color={"White"}>White</Option>
-            <Option color={"Black"}>Black</Option>
-            <Option color={"Red"}>Red</Option>
-            <Option color={"Blue"}>Blue</Option>
-            <Option color={"Yellow"}>Yellow</Option>
-            <Option color={"Green"}>Green</Option>
-          </Select>
-          <Select >
-            <Option disabled selected>
-              Size
-            </Option>
-            <Option value={"XS"}>XS</Option>
-            <Option value={"S"}>S</Option>
-            <Option value={"M"}>M</Option>
-            <Option value={"L"}>L</Option>
-            <Option value={"XL"}>XL</Option>
-          </Select>
-          <Select>
-            <Option disabled selected>
-              Gender
-            </Option>
-            <Option value={"Men"}>Men</Option>
-            <Option value={"Women"}>Women</Option>
-          </Select>
-          <Select>
-            <Option disabled selected>
-              Condition
-            </Option>
-            <Option value={"New"}>New</Option>
-            <Option value={"Used"}>Used</Option>
-          </Select>
-          <Box sx={{ width: 300 }}>
-            Price Range €
-            <Slider
-              getAriaLabel={() => 'Price range'}
-              value={value}
-              onChange={handleChange}
-              valueLabelDisplay="auto"
-              getAriaValueText={valuetext}
-            />
-          </Box>
-        </Filter>
-        <Filter>
-          <FilterText>Sort Products:</FilterText>
-          <Select>
-            <Option selected>Newest</Option>
-            <Option>Price (asc)</Option>
-            <Option>Price (desc)</Option>
-          </Select>
-        </Filter>
-      </FilterContainer>
-      <Products />
-      <Footer />
   
-    </Container>
-    
-  );
-};
+  else{
+    this.setState({
+      col:categ,
+      products:popularProducts.filter(product => {
+        return product.color.indexOf(e.target.value)>=0
+        
+      })
+    })
+  }
+  console.log(e.target.value);
 
-export default ProductList;
+}
+
+//filtering by size
+filteringSize =(e)=>{
+  let sz = e.target.value;
+  if(sz ==='all'){
+    this.setState({
+      siz:sz,
+      products:popularProducts
+    })
+  }
+
+  
+  else{
+    this.setState({
+      siz:sz,
+      products:popularProducts.filter(product => {
+        return product.size.indexOf(e.target.value)>=0
+        
+      })
+    })
+  }
+  console.log(e.target.value);
+
+}
+
+//filtering by gender
+filteringGender =(e)=>{
+  let gende = e.target.value;
+  if(gende ==='all'){
+    this.setState({
+      gend:gende,
+      products:popularProducts
+    })
+  }
+
+  
+  else{
+    this.setState({
+      gend:gende,
+      products:popularProducts.filter(product => {
+        return product.gender.indexOf(e.target.value)>=0
+        
+      })
+    })
+  }
+  console.log(e.target.value);
+
+}
+
+//filtering by condition
+filteringCondition =(e)=>{
+  let condi = e.target.value;
+  if(condi ==='all'){
+    this.setState({
+      cond:condi,
+      products:popularProducts
+    })
+  }
+
+  
+  else{
+    this.setState({
+      cond:condi,
+      products:popularProducts.filter(product => {
+        return product.condition.indexOf(e.target.value)>=0
+        
+      })
+    })
+  }
+  console.log(e.target.value);
+
+}
+
+  render(){
+    return (
+      <Container>
+        <Navbar />
+        <Announcement />
+        <Title>Clothes_log</Title>
+        <Filter
+          sorting={this.sorting}
+          sorts={this.state.sort}
+
+          filteringColor={this.filteringColor}
+          col={this.state.col}
+
+          filteringSize={this.filteringSize}
+          siz={this.state.siz}
+
+          filteringGender={this.filteringGender}
+          gend={this.state.gend}
+
+          filteringCondition={this.filteringCondition}
+          cond={this.state.cond}
+
+        />
+        
+        
+        <Products products={this.state.products}/>
+        <Footer />
+    
+      </Container>
+      
+    );
+
+  }
+
+}
