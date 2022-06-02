@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import Navbar from "../components/NavBarLogged";
+import Navbar from "../components/Navbar";
 import Announcement from "../components/Announcement";
 import Products from "../components/ProductsLogged";
-import Footer from "../components/FooterLogged";
+import Footer from "../components/Footer";
 import { popularProducts } from "../data";
 import React, { Component } from "react";
 import Filter from "../components/Filter";
@@ -154,7 +154,7 @@ filteringCondition =(e)=>{
       <Container>
         <Navbar />
         <Announcement />
-        <Title>Clothes_notlog</Title>
+        <Title>Clothes</Title>
         <Filter
           sorting={this.sorting}
           sorts={this.state.sort}

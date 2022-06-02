@@ -154,7 +154,7 @@ filteringCondition =(e)=>{
       <Container>
         <Navbar />
         <Announcement />
-        <Title>Clothes_log</Title>
+        <Title>Clothes</Title>
         <Filter
           sorting={this.sorting}
           sorts={this.state.sort}
