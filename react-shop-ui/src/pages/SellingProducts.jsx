@@ -93,7 +93,6 @@ const Cart = () => {
   return (
     <Container>
       <Navbar />
-      <Announcement />
       <Wrapper>
         <Title>SELLING PRODUCTS</Title>
         <Bottom>

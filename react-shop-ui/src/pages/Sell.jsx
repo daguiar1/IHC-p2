@@ -36,7 +36,7 @@ const Left = styled.div`
 const Form = styled.form`
 position: absolute;
   right: 20%;
-  top:35%;
+  top:25%;
   width: 30%;
   display:flex;
   flex-direction: column;

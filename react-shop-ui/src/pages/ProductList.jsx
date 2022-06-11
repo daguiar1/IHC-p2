@@ -8,7 +8,9 @@ import React, { Component } from "react";
 import Filter from "../components/Filter";
 
 
-const Container = styled.div``;
+const Container = styled.div`
+height: 65px;
+`;
 
 const Title = styled.h1`
   margin: 20px;

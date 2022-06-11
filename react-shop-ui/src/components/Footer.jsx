@@ -11,6 +11,8 @@ import styled from "styled-components";
 import { mobile } from "../responsive";
 
 const Container = styled.div`
+background-color: #edede9;
+
   display: flex;
   ${mobile({ flexDirection: "column" })}
 `;

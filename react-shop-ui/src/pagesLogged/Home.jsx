@@ -7,8 +7,9 @@ import Navbar from "../components/NavBarLogged";
 const Home = () => {
   return (
     <div>
-      <Announcement />
+      
       <Navbar />
+      <Announcement />
       <Categories />
       <Footer/>
     </div>

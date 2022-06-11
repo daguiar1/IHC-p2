@@ -6,15 +6,17 @@ import styled from "styled-components";
 import { mobile } from "../responsive";
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
-
+import Logo1 from "../imagens/logoOn.png"
+import LogoBuy from "../imagens/buyLogo.png"
 
 const Container = styled.div`
-  height: 60px;
+background-color: #edede9;
+  height: 78px;
   ${mobile({ height: "50px" })}
 `;
 
 const Wrapper = styled.div`
-  padding: 10px 20px;
+  padding: 20px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,10 +30,11 @@ const Left = styled.div`
 `;
 
 const SearchContainer = styled.div`
-  border: 0.5px solid lightgray;
+  border: 2px solid lightgray;
   display: flex;
   align-items: center;
   margin-left: 25px;
+  
   padding: 5px;
 `;
 
@@ -43,10 +46,19 @@ const Input = styled.input`
 const Center = styled.div`
   flex: 1;
   text-align: center;
+ 
 `;
 
 const Logo = styled.h1`
-  font-weight: bold;
+
+height: 195px;
+width: 195px;
+margin: 0 auto;
+display: block;
+position: absolute;
+top: -70px;
+left: calc((100% - 430px) / 2);
+z-index: 100000;
   ${mobile({ fontSize: "24px" })}
 `;
 const Right = styled.div`
@@ -69,10 +81,24 @@ const MenuItem2 = styled.h2`
   ${mobile({ fontSize: "24px" })}
 `;
 
+const ImageLogo = styled.img`
+
+width: 185%;
+display: block;
+`;
+const ImageLogo2 = styled.img`
+
+width: 10%;
+display: block;
+
+`;
+
 const Navbar = () => {
   return (
     <Container>
+      
       <Wrapper>
+        
         <Left>
           <ShoppingBagIcon fontSize="Large"/>
           <SearchContainer>
@@ -81,11 +107,18 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <MenuItem2><a href="/productList">BUY</a></MenuItem2>
+          <MenuItem2>
+          <a href="/productList">
+           <ImageLogo2 src={LogoBuy}></ImageLogo2>
+            </a>
+          </MenuItem2>
         </Center>
         <Center>
           <Logo>
-            <Link to="/home">ONWEAR</Link></Logo>
+            <a href="/home">
+            <ImageLogo src={Logo1}></ImageLogo>
+            </a>
+          </Logo>
         </Center>
         <Center>
           <MenuItem2><a href="/login">SELL</a></MenuItem2>
