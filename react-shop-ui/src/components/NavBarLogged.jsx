@@ -7,7 +7,8 @@ import { mobile } from "../responsive";
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
 import Logo1 from "../imagens/logoOn.png"
-import LogoBuy from "../imagens/buyLogo.png"
+import LogoBuy from "../imagens/logoBuy.png"
+import LogoSell from "../imagens/logoSell.png"
 
 const Container = styled.div`
 background-color: #edede9;
@@ -16,7 +17,7 @@ background-color: #edede9;
 `;
 
 const Wrapper = styled.div`
-  padding: 20px 20px;
+  padding: 0px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -29,12 +30,13 @@ const Left = styled.div`
   align-items: center;
 `;
 
+
 const SearchContainer = styled.div`
   border: 2px solid lightgray;
   display: flex;
   align-items: center;
   margin-left: 25px;
-  
+  margin-top: -135px;
   padding: 5px;
 `;
 
@@ -46,6 +48,7 @@ const Input = styled.input`
 const Center = styled.div`
   flex: 1;
   text-align: center;
+ 
 `;
 
 const Logo = styled.h1`
@@ -72,13 +75,11 @@ const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
+  margin-top: -135px;
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
-const MenuItem2 = styled.h2`
-  font-weight: bold;
-  ${mobile({ fontSize: "24px" })}
-`;
+
 
 const ImageLogo = styled.img`
 
@@ -86,8 +87,9 @@ width: 185%;
 display: block;
 `;
 const ImageLogo2 = styled.img`
-
-width: 10%;
+margin-left: 10px;
+margin-top: -90px;
+width: 85%;
 display: block;
 
 `;
@@ -103,11 +105,10 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <MenuItem2>
           <a href="/productListLogged">
            <ImageLogo2 src={LogoBuy}></ImageLogo2>
             </a>
-          </MenuItem2>
+          
         </Center>
         <Center>
           <Logo>
@@ -117,7 +118,9 @@ const Navbar = () => {
           </Logo>
         </Center>
         <Center>
-          <MenuItem2><a href="/sell">SELL</a></MenuItem2>
+        <a href="/Sell">
+           <ImageLogo2 src={LogoSell}></ImageLogo2>
+            </a>
         </Center>
         <Right>  
           <MenuItem>           
