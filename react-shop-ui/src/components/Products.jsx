@@ -9,12 +9,12 @@ const Container = styled.div`
     justify-content: space-between;
 `;
 
-export default function Products(props) {
+export default function Products(props){
   return (
     <Container>
-      {props.roducts.map((product) => (
-        <Product product={product} key={item.id} />
+      {props.products.map((item) => (
+        <Product item={item} key={item.id} />
       ))}
     </Container>
-  );
+  )
 }

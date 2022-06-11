@@ -25,9 +25,12 @@ export default class ProductList extends Component{
       siz:'',
       gend:'',
       cond:'',
-
+      
     }
+    
   }
+
+  
 //sorting
 sorting = (e)=>{
   //console.log(e.target.value);
@@ -67,7 +70,7 @@ filteringColor =(e)=>{
   else{
     this.setState({
       col:categ,
-      products:popularProducts.filter(product => {
+      products:this.state.products.filter(product => {
         return product.color.indexOf(e.target.value)>=0
         
       })
@@ -89,15 +92,16 @@ filteringSize =(e)=>{
 
   
   else{
+    console.log(e.target.value);
     this.setState({
       siz:sz,
-      products:popularProducts.filter(product => {
+      products:this.state.products.filter(product => {
         return product.size.indexOf(e.target.value)>=0
         
       })
     })
   }
-  console.log(e.target.value);
+  
 
 }
 
@@ -115,7 +119,7 @@ filteringGender =(e)=>{
   else{
     this.setState({
       gend:gende,
-      products:popularProducts.filter(product => {
+      products:this.state.products.filter(product => {
         return product.gender.indexOf(e.target.value)>=0
         
       })
@@ -139,7 +143,7 @@ filteringCondition =(e)=>{
   else{
     this.setState({
       cond:condi,
-      products:popularProducts.filter(product => {
+      products:this.state.products.filter(product => {
         return product.condition.indexOf(e.target.value)>=0
         
       })
@@ -151,13 +155,15 @@ filteringCondition =(e)=>{
 
   render(){
     return (
+      
       <Container>
         <Navbar />
         <Announcement />
         <Title>Clothes</Title>
+        
         <Filter
           sorting={this.sorting}
-          sorts={this.state.sort}
+          sort={this.state.sort}
 
           filteringColor={this.filteringColor}
           col={this.state.col}
@@ -170,11 +176,14 @@ filteringCondition =(e)=>{
 
           filteringCondition={this.filteringCondition}
           cond={this.state.cond}
+          
+          
 
         />
-        
-        
         <Products products={this.state.products}/>
+
+        
+        
         <Footer />
     
       </Container>
@@ -182,5 +191,6 @@ filteringCondition =(e)=>{
     );
 
   }
+  
 
 }

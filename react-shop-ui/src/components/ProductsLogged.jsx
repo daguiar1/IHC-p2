@@ -9,14 +9,14 @@ const Container = styled.div`
     justify-content: space-between;
 `;
 
-const Products = () => {
+export default function Products(props){
   return (
     <Container>
-      {popularProducts.map((item) => (
+      {props.products.map((item) => (
         <Product item={item} key={item.id} />
       ))}
     </Container>
-  );
-};
+  )
+}
 
-export default Products;
+ 

@@ -50,8 +50,8 @@
       img:"https://i.ibb.co/wz6684D/mid-blue-relaxed-fit-rigid-jeans-removebg-preview-1.png",
       color: "White",
       size: "S",
-      gender: "Women",
-      condition: "New",
+      gender: "Men",
+      condition: "Used",
       price: 28,
     },
   ]
