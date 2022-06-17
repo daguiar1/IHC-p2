@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Footer from "../components/FooterLogged";
+import Navbar from "../components/NavBarLogged";
 import { mobile } from "../responsive";
 import React, { useState } from "react";
 

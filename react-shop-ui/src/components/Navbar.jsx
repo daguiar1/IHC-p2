@@ -102,7 +102,6 @@ const Navbar = () => {
       <Wrapper>
         
         <Left>
-        <ShoppingBagIcon fontSize="Large"/>
           <SearchContainer>
             
             <Input placeholder="Search" />
@@ -126,14 +125,13 @@ const Navbar = () => {
         </Center>
         <Center>
           
-          <a href="/Sell">
+          <a href="/Login">
            <ImageLogo2 src={LogoSell}></ImageLogo2>
             </a>
           
         </Center>
         <Right>
           
-          <MenuItem><a href="/register">REGISTER</a></MenuItem>
           <MenuItem><a href="/login">SIGN IN</a></MenuItem>
           
         </Right>

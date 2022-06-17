@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import {mobile} from "../responsive";
-import Axios from 'axios';
 import React, { useState } from "react";
 
 
@@ -11,7 +10,7 @@ const Container = styled.div`
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url("https://images.pexels.com/photos/6984650/pexels-photo-6984650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+    url("https://images.pexels.com/photos/10679232/pexels-photo-10679232.jpeg")
       center;
   background-size: cover;
   display: flex;
@@ -47,10 +46,9 @@ const Button = styled.button`
   width: 40%;
   border: none;
   padding: 15px 20px;
-  background-color: teal;
+  background-color: #008000;
   color: white;
   cursor: pointer;
-  margin-bottom: 10px;
 `;
 
 const Link = styled.a`
@@ -61,41 +59,14 @@ const Link = styled.a`
 `;
 
 const Login = () => {
-
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [Loginstatus, setLoginstatus] = useState('');
-
-  const login = () => {
-    Axios.post("http://localhost:3001/login", {
-      username: username,
-      password: password,
-    }).then((response) => {
-      if (response.data.message){
-        setLoginstatus(response.data.message);
-      } else {
-        setLoginstatus(response.data[0].username);
-      }
-    });
-  };
-
   return (
     <Container>
       <Wrapper>
         <Title>SIGN IN</Title>
         <Form>
-          <Input placeholder="username" 
-          Onchange={(e) => {
-            setUsername(e.target.value);
-            }} 
-          />
-          <Input placeholder="password" 
-          Onchange={(e) => {
-            setPassword(e.target.value);
-            }} 
-          />
+          <Input placeholder="username" />
+          <Input placeholder="password"/>
           <Button><a href="/homeLogged">LOGIN</a></Button>
-          <h1>{Loginstatus}</h1>
           <Link><a href="/register">CREATE A NEW ACCOUNT</a></Link>
         </Form>
       </Wrapper>

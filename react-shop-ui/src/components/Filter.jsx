@@ -52,6 +52,9 @@ export default function Filter
           <Option value="all">Color</Option>
           <Option value="Black">Black</Option>
           <Option value="White">White</Option>
+          <Option value="Blue">Blue</Option>
+          <Option value="Green">Green</Option>
+          <Option value="Orange">Orange</Option>
       </Select>
 
       {/* filtering by size */}
@@ -60,6 +63,7 @@ export default function Filter
           <Option value="S">S</Option>
           <Option value="M">M</Option>
           <Option value="L">L</Option>
+          <Option value="XL">XL</Option>
       </Select>
 
       {/* filtering by gender */}

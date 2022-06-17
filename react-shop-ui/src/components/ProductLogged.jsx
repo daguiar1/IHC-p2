@@ -23,13 +23,13 @@ import {
   
   const Container = styled.div`
     flex: 1;
-    margin: 5px;
-    min-width: 280px;
+    margin: 7px;
+    min-width: 300px;
     height: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f5fbfd;
+    background-color: #edede9;
     position: relative;
   
     &:hover ${Info}{
@@ -37,16 +37,8 @@ import {
     }
   `;
   
-  const Circle = styled.div`
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: white;
-    position: absolute;
-  `;
-  
   const Image = styled.img`
-    height: 75%;
+    height: 70%;
     z-index: 2;
   `;
   
@@ -77,7 +69,7 @@ export default function Product ({ item }){
             <a href="/cart"><ShoppingCartOutlined /></a>
           </Icon>
           <Icon>
-          <a href="/product"><SearchOutlined /></a>
+          <a href="/productLogged"><SearchOutlined /></a>
           </Icon>
           <Icon>
             <FavoriteBorderOutlined />

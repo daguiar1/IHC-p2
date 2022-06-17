@@ -98,7 +98,6 @@ const Navbar = () => {
     <Container>
       <Wrapper>
         <Left>
-          <ShoppingBagIcon fontSize="Large"/>
           <SearchContainer>
             <Input placeholder="Search" />
             <Search style={{ color: "gray", fontSize: 16 }} />
