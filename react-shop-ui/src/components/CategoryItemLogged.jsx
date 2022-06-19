@@ -1,6 +1,22 @@
 import { Link } from "@material-ui/core";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import Button from '@mui/material/Button';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { purple } from '@mui/material/colors';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      // Purple and green play nicely together.
+      main: purple[500],
+    },
+    secondary: {
+      // This is green.A700 as hex.
+      main: '#008000',
+    },
+  },
+});
 
 const Container = styled.div`
   flex: 1;
@@ -30,17 +46,12 @@ const Info = styled.div`
 `;
 
 const Title = styled.h1`
-    color:white;
+    color:#AAFE00;
     margin-bottom: 20px;
-`;
-
-const Button = styled.button`
-    border:none;
-    padding: 10px;
-    background-color: white;
-    color:gray;
-    cursor: pointer;
-    font-weight: 600;
+    font-size: 60px;
+    font-family: Monospace;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
 `;
 
 const CategoryItem = ({ item }) => {
@@ -49,7 +60,9 @@ const CategoryItem = ({ item }) => {
       <Image src={item.img} />
       <Info>
         <Title>{item.title}</Title>
-        <Button><a href="/productListLogged">SHOP NOW</a></Button>
+        <ThemeProvider theme={theme}>
+        <Button variant="contained" color="secondary" href="/productListLogged">SHOP NOW</Button>
+        </ThemeProvider>
       </Info>
     </Container>
   );
