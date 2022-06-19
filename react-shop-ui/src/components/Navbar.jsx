@@ -7,8 +7,8 @@ import { mobile } from "../responsive";
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
 import Logo1 from "../imagens/logoOn.png"
-import LogoBuy from "../imagens/logoBuy.png"
-import LogoSell from "../imagens/logoSell.png"
+import LogoBuy from "../imagens/logoBuy2.png"
+import LogoSell from "../imagens/logoSell2.png"
 
 const Container = styled.div`
 background-color: #edede9;
@@ -36,7 +36,7 @@ const SearchContainer = styled.div`
   display: flex;
   align-items: center;
   margin-left: 25px;
-  margin-top: -135px;
+  margin-top: 10px;
   padding: 5px;
 `;
 
@@ -75,7 +75,7 @@ const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
-  margin-top: -135px;
+  margin-top: 15px;
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
@@ -87,9 +87,9 @@ width: 185%;
 display: block;
 `;
 const ImageLogo2 = styled.img`
-margin-left: 10px;
-margin-top: -90px;
-width: 85%;
+margin-left: 90px;
+margin-top: 15px;
+width: 25%;
 display: block;
 
 `;

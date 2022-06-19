@@ -119,28 +119,28 @@ const Sell = () => {
     const [checkedFive, setCheckedFive] = React.useState(false);
 
 
-  const handleChangeOne = () => {
-    setCheckedOne(!checkedOne);
-  };
+    const handleChangeOne = () => {
+      setCheckedOne(!checkedOne);
+    };
 
-  const handleChangeTwo = () => {
-    setCheckedTwo(!checkedTwo);
-  };
+    const handleChangeTwo = () => {
+      setCheckedTwo(!checkedTwo);
+    };
 
-  const handleChangeThree = () => {
-    setCheckedThree(!checkedThree);
-  }; 
-  const handleChangeFour = () => {
-    setCheckedFour(!checkedFour);
-  }; 
-  const handleChangeFive = () => {
-    setCheckedFive(!checkedFive);
-  }; 
+    const handleChangeThree = () => {
+      setCheckedThree(!checkedThree);
+    }; 
+    const handleChangeFour = () => {
+      setCheckedFour(!checkedFour);
+    }; 
+    const handleChangeFive = () => {
+      setCheckedFive(!checkedFive);
+    }; 
 
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-  
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+    
 
   return (
     
