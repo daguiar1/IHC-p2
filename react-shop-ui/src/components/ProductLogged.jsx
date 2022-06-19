@@ -4,6 +4,7 @@ import {
     ShoppingCartOutlined,
   } from "@material-ui/icons";
   import styled from "styled-components";
+  import Figure from 'react-bootstrap/Figure'
   
   const Info = styled.div`
     opacity: 0;
@@ -36,6 +37,8 @@ import {
       opacity: 1;
     }
   `;
+
+  
   
   const Image = styled.img`
     height: 70%;
@@ -57,12 +60,25 @@ import {
       transform: scale(1.1);
     }
   `;
+
+
   
 export default function Product ({ item }){
     return (
       <Container>
+        
         <h2>Price: {item.price}€ </h2>
-        <Image src={item.img}/>
+        <Figure>
+          <Figure.Image
+            width={173}
+            height={231}
+            src={item.img}
+          />
+          <Figure.Caption>
+            {item.name}
+          </Figure.Caption>
+        </Figure>
+      
         
         <Info>
           <Icon>
@@ -74,8 +90,10 @@ export default function Product ({ item }){
           <Icon>
             <FavoriteBorderOutlined />
           </Icon>
+          
         </Info>  
-      <h2>{item.condition}</h2>
+        <h2>{item.condition}</h2>
+      
       </Container>
     );
   }

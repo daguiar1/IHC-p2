@@ -4,6 +4,8 @@ import {
   ShoppingCartOutlined,
 } from "@material-ui/icons";
 import styled from "styled-components";
+import Figure from 'react-bootstrap/Figure'
+
 
 const Info = styled.div`
   opacity: 0;
@@ -22,21 +24,20 @@ const Info = styled.div`
 `;
 
 const Container = styled.div`
-
-  flex: 1;
-  margin: 5px;
-  min-width: 280px;
-  height: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #edede9;
-  position: relative;
-
-  &:hover ${Info}{
-    opacity: 1;
-  }
-`;
+    flex: 1;
+    margin: 7px;
+    min-width: 300px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #edede9;
+    position: relative;
+  
+    &:hover ${Info}{
+      opacity: 1;
+    }
+  `;
 
 const Circle = styled.div`
   width: 200px;
@@ -67,20 +68,31 @@ const Icon = styled.div`
   }
 `;
 
-const Product = ({ item }) => {
+export default function Product ({ item }){
   return (
     <Container>
+      
       <h2>Price: {item.price}€ </h2>
-      <Image src={item.img}/>
+      <Figure>
+        <Figure.Image
+          width={173}
+          height={231}
+          src={item.img}
+        />
+        <Figure.Caption>
+          {item.name}
+        </Figure.Caption>
+      </Figure>
+    
       
       <Info>
         <Icon>
         <a href="/product"><SearchOutlined /></a>
         </Icon>
+        
       </Info>  
-    <h2>{item.condition}</h2>
+      <h2>{item.condition}</h2>
+    
     </Container>
   );
-};
-
-export default Product;
+}

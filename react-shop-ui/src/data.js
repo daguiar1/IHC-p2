@@ -26,6 +26,7 @@
       gender: "Men",
       condition: "New",
       price: 26,
+      name: "Black Tree Hoodie",
     },
     {
       id:2,
@@ -35,6 +36,7 @@
       gender: "Men",
       condition: "New",
       price: 30,
+      name: "Black Jeans",
     },
     {
       id:3,
@@ -44,6 +46,7 @@
       gender: "Men",
       condition: "New",
       price: 12,
+      name: "White Los Angels T-Shirt",
     },
     {
       id:4,
@@ -53,6 +56,7 @@
       gender: "Men",
       condition: "Used",
       price: 28,
+      name: "Classic Jeans",
     },
     {
       id:5,
@@ -62,6 +66,7 @@
       gender: "Men",
       condition: "New",
       price: 12,
+      name: "Orange Dragon T-Shirt",
     },
     {
       id:6,
@@ -71,6 +76,7 @@
       gender: "Men",
       condition: "New",
       price: 25,
+      name: "White Jeans",
     },
     {
       id:7,
@@ -80,6 +86,7 @@
       gender: "Men",
       condition: "Used",
       price: 18,
+      name: "Green Cargo Pants",
     },
     {
       id:8,
@@ -89,6 +96,7 @@
       gender: "Men",
       condition: "Used",
       price: 14,
+      name: "Blue Marine T-Shirt",
     },
     {
       id:9,
@@ -98,6 +106,7 @@
       gender: "Men",
       condition: "New",
       price: 30,
+      name: "Denim Jacket",
     },
     {
       id:10,
@@ -107,6 +116,7 @@
       gender: "Women",
       condition: "New",
       price: 30,
+      name: "Green Dress",
     },
     {
       id:11,
@@ -116,6 +126,7 @@
       gender: "Women",
       condition: "New",
       price: 42,
+      name: "Orange Dress",
     },
     {
       id:12,
@@ -125,6 +136,7 @@
       gender: "Women",
       condition: "Used",
       price: 17,
+      name: "Black Legging",
     },
     {
       id:13,
@@ -134,6 +146,7 @@
       gender: "Women",
       condition: "New",
       price: 25,
+      name: "White Dress",
     },
     {
       id:14,
@@ -143,6 +156,7 @@
       gender: "Women",
       condition: "New",
       price: 50,
+      name: "Green Dress",
     },
     {
       id:15,
@@ -152,6 +166,7 @@
       gender: "Women",
       condition: "Used",
       price: 32,
+      name: "Black Sports Coat",
     },
   ]
   export const sellingProducts = [
