@@ -1,1 +1,1 @@
-# IHC-p2
+#  Projeto da cadeira de interação humano-computador
