@@ -112,6 +112,7 @@ const Sell = () => {
     }
     const [nameReg, setNameReg] = useState('')
     const [PriceReg, setPriceReg] = useState('')
+    const [SizeReg, setSizeReg] = useState('')
     const [checkedOne, setCheckedOne] = React.useState(false);
     const [checkedTwo, setCheckedTwo] = React.useState(false);
     const [checkedThree, setCheckedThree] = React.useState(false);
@@ -167,6 +168,11 @@ const Sell = () => {
             setNameReg(e.target.value);
             }} 
           />
+
+          <Input placeholder="Size ( Example: M )" 
+          Onchange={(e) => {
+            setSizeReg(e.target.value);
+            }} />
           Gender:
           <Checkbox 
             label=" Men"
